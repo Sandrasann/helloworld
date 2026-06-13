@@ -10,18 +10,37 @@
             height: 100%;
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family: 'Inter', sans-serif;
             background-color: #0f172a; /* Sleek dark slate background */
             color: #f8fafc;
             overflow: hidden;
+            text-align: center;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+        
+        .small-text {
+            font-size: clamp(0.875rem, 3vw, 1.125rem);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #94a3b8; /* Muted modern grey */
+            white-space: nowrap;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
         
         h1 {
-            font-size: clamp(2.5rem, 12vw, 5rem);
-            white-space: nowrap;
-            text-align: center;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            line-height: 1.2;
+            margin: 0;
             font-weight: 700;
             /* Beautiful gradient text */
             background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
@@ -54,6 +73,7 @@
     </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="small-text">Welcome to my online home</div>
+    <h1>Best Digital Marketing Expert in Kochi</h1>
 </body>
 </html>
