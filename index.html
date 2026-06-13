@@ -198,6 +198,88 @@
             50% { transform: translateY(-15px); }
         }
 
+        /* Services Section */
+        .services {
+            padding: 6rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            background-color: var(--bg-color);
+            position: relative;
+        }
+
+        .services-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .services h2 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        .services-intro {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin-inline: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .service-card h3::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0;
+            font-size: 1rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .about-container {
@@ -206,6 +288,16 @@
             }
             .about p {
                 font-size: 1rem;
+            }
+            .services {
+                padding: 4rem 1.5rem;
+            }
+            .services-intro {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+            .service-card {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -224,6 +316,28 @@
                 <h2>About Me</h2>
                 <p>I’m a passionate digital marketing expert with a simple mission, to help businesses grow smarter, faster, and stronger in the online world. Over the years, I’ve learned that success in digital marketing isn’t about throwing random strategies into the air, it’s about crafting the right message, reaching the right audience, and delivering results that matter.</p>
                 <p>I specialize in creating tailored strategies across SEO, social media, paid ads, and content marketing that not only boost visibility but also drive real business growth. Every project I take on is powered by research, creativity, and data-driven decision-making. Whether you’re a startup looking for visibility or a brand aiming to scale, I design campaigns that fit your unique goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-container">
+            <h2>Want To Know My Services!</h2>
+            <p class="services-intro">I offer a comprehensive suite of digital marketing services to help businesses achieve their online goals. My services encompass the aspects of digital marketing, including SEO, SEM and SMM. Also I help businesses grow their web presence, reach new audiences, and drive results through strategic digital marketing. I can help you unlock the power of the networked world to achieve your marketing objectives.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>01. SEO</h3>
+                    <p>SEO is the practice of improving the quality and quantity of traffic to your website through the organic search results. It's an on-going process as search engine algorithms constantly evolve.</p>
+                </div>
+                <div class="service-card">
+                    <h3>02. SEM</h3>
+                    <p>Search Engine Marketing in short SEM is a digital marketing strategy focused on increasing the visibility of a website in Search Engine Results Pages (SERPs) through paid advertising and optimization.</p>
+                </div>
+                <div class="service-card">
+                    <h3>03. SMM</h3>
+                    <p>Social Media Marketing is the practice of using social media networks to fulfill your marketing goals and a powerful tool that businesses can use to reach a large audience and grow.</p>
+                </div>
             </div>
         </div>
     </section>
